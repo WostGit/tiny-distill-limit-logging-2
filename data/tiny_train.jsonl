@@ -1,0 +1,10 @@
+{"instruction":"Summarize tiny distillation goals.","input":"Need verbose logs for CI smoke testing.","output":"Use tiny LoRA distillation with explicit timing, memory, and IO logs."}
+{"instruction":"List first bottlenecks to inspect.","input":"CI run starts failing or slowing.","output":"Check wall-clock step time, RAM snapshots, token lengths, checkpoint IO, and eval overhead."}
+{"instruction":"Why keep the dataset tiny?","input":"GitHub-hosted CPU runner only.","output":"A tiny dataset keeps runtime bounded while preserving instrumentation quality."}
+{"instruction":"What should logs include per step?","input":"Training loop diagnostics.","output":"Log step duration, elapsed time, optimizer index, samples, and tokens processed."}
+{"instruction":"What should preprocessing logs include?","input":"Tokenizer stage diagnostics.","output":"Record tokenization duration and sequence length statistics before training begins."}
+{"instruction":"What should environment logs include?","input":"Reproducibility diagnostics.","output":"Print Python, torch, OS, CPU count, and thread settings."}
+{"instruction":"How should checkpoints be instrumented?","input":"Detect save bottlenecks.","output":"Log save start/end timestamps, file count, and checkpoint directory size."}
+{"instruction":"What should evaluation report?","input":"Post-train diagnostics.","output":"Measure adapter reload time, evaluation duration, and compact JSON metrics."}
+{"instruction":"What does this smoke test prove?","input":"Scope clarification.","output":"It proves pipeline viability and exposes first scaling limits on standard CI hardware."}
+{"instruction":"What does this smoke test not prove?","input":"Benchmark clarification.","output":"It does not establish state-of-the-art quality or large-scale distillation performance."}

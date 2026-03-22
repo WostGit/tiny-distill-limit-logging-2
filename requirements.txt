@@ -1,0 +1,5 @@
+torch==2.2.2
+transformers==4.39.3
+peft==0.10.0
+psutil==5.9.8
+accelerate==0.28.0
