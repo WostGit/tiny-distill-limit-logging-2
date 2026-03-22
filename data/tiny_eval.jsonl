@@ -1,0 +1,4 @@
+{"prompt":"Classify sentiment: The logs are informative.","target":"positive"}
+{"prompt":"Explain: What does checkpoint instrumentation show?","target":"It shows save latency, size, and file-count overhead."}
+{"prompt":"Complete: Token length statistics help identify","target":"context-window pressure and batching inefficiency."}
+{"prompt":"Rewrite: This is a smoke test.","target":"This is a small diagnostic run, not a benchmark."}
