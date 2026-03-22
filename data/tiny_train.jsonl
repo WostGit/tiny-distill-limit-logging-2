@@ -1,0 +1,12 @@
+{"prompt":"Summarize: Tiny models need careful logging.","target":"Tiny models need detailed diagnostics to expose limits."}
+{"prompt":"Rewrite formally: this run is fast but noisy.","target":"This run is quick but emits verbose diagnostic output."}
+{"prompt":"Classify sentiment: I love deterministic smoke tests.","target":"positive"}
+{"prompt":"Classify sentiment: This checkpoint write is slow.","target":"negative"}
+{"prompt":"Explain in one sentence: why monitor RAM?","target":"RAM snapshots reveal memory pressure before failures occur."}
+{"prompt":"Convert to bullet: wall-clock, RAM, IO.","target":"- wall-clock\n- RAM\n- checkpoint IO"}
+{"prompt":"Complete: Preprocessing overhead often appears in","target":"tokenization and data loading timings."}
+{"prompt":"Answer briefly: Why run eval after train?","target":"To measure adapter reload and inference overhead immediately."}
+{"prompt":"Paraphrase: Keep experiments self-contained.","target":"Ensure every required component is stored in the repository."}
+{"prompt":"Finish: Thread behavior can affect","target":"CPU utilization, latency, and throughput stability."}
+{"prompt":"Summarize: CI runners are shared resources.","target":"CI machines have constrained CPU and memory that shape runtime limits."}
+{"prompt":"Rewrite: Logging should be explicit.","target":"Instrumentation should be direct, readable, and comprehensive."}
