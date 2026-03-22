@@ -1,0 +1,4 @@
+{"instruction":"State the repo purpose.","input":"One sentence.","output":"This repository is a tiny, verbose distillation smoke test for GitHub Actions CPU runners."}
+{"instruction":"Name key diagnostics.","input":"Keep it concise.","output":"The run highlights timing, RAM usage, token lengths, checkpoint IO, and evaluation overhead."}
+{"instruction":"Why is determinism useful?","input":"CI reliability.","output":"Determinism makes regressions easier to detect by reducing run-to-run noise."}
+{"instruction":"What is the first action when runs slow down?","input":"Debug checklist.","output":"Inspect per-step timing and preprocessing metrics before changing model complexity."}
