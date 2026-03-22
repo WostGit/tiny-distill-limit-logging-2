@@ -1,0 +1,51 @@
+name: tiny-distill-limit-smoke-test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUNBUFFERED: "1"
+      TOKENIZERS_PARALLELISM: "false"
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tiny distillation smoke train
+        run: |
+          python scripts/train_tiny_distill.py \
+            --train-data data/tiny_train.jsonl \
+            --eval-data data/tiny_eval.jsonl \
+            --output-dir outputs/checkpoints/tiny_adapter \
+            --metrics-dir outputs/metrics
+
+      - name: Run standalone eval (adapter reload check)
+        run: |
+          python scripts/eval_tiny_distill.py \
+            --base-model sshleifer/tiny-gpt2 \
+            --adapter-dir outputs/checkpoints/tiny_adapter \
+            --eval-data data/tiny_eval.jsonl \
+            --metrics-dir outputs/metrics
+
+      - name: Upload metrics artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: tiny-distill-metrics
+          path: outputs/metrics/*.json*
+          if-no-files-found: error
