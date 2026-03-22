@@ -1,0 +1,39 @@
+name: tiny-distill-smoke-test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tiny distillation training smoke test
+        run: |
+          python scripts/train_tiny_distill.py
+
+      - name: Run standalone evaluation pass
+        run: |
+          python scripts/eval_tiny_distill.py \
+            --adapter-dir outputs/checkpoints/tiny_lora_adapter \
+            --metrics-out outputs/metrics/eval_metrics_standalone.json
+
+      - name: Upload metrics artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: tiny-distill-metrics
+          path: outputs/metrics/*.json
