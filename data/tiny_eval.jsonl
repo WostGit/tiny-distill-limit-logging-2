@@ -1,0 +1,6 @@
+{"prompt": "Complete: This repository is", "target": "a tiny, self-contained smoke test for distillation limits."}
+{"prompt": "One sentence on wall-clock limits.", "target": "Wall-clock limits appear when step time and overhead exceed CI budgets."}
+{"prompt": "Complete: Preprocessing overhead is visible when", "target": "tokenization and data loading consume a large runtime share."}
+{"prompt": "Why record checkpoint size?", "target": "Checkpoint size helps explain IO cost and artifact growth."}
+{"prompt": "One sentence about evaluation scope.", "target": "This evaluation is a smoke signal for regressions, not a benchmark."}
+{"prompt": "Complete: Thread behavior can", "target": "improve or degrade throughput depending on workload and settings."}

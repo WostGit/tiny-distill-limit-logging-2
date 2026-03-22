@@ -1,0 +1,20 @@
+{"prompt": "Summarize in one sentence: tiny models reveal practical limits.", "target": "Tiny models can expose practical training bottlenecks quickly."}
+{"prompt": "Complete: Distillation helps when", "target": "a small student learns useful behavior from a larger teacher."}
+{"prompt": "Rewrite formally: logs are noisy but useful", "target": "The logs are verbose, yet they provide actionable diagnostic value."}
+{"prompt": "State a caution about benchmarks.", "target": "A smoke test is informative for limits but insufficient for final quality claims."}
+{"prompt": "Give one reason to measure preprocessing.", "target": "Preprocessing can dominate total runtime on small CPU-bound experiments."}
+{"prompt": "Complete: Checkpoint IO matters because", "target": "saving files can consume a meaningful fraction of wall-clock time."}
+{"prompt": "Write a short note about thread settings.", "target": "Thread counts can change throughput and variability across runs."}
+{"prompt": "Explain why tiny datasets are useful in CI.", "target": "Tiny datasets make deterministic end-to-end checks affordable in CI."}
+{"prompt": "Complete: RAM snapshots are needed to", "target": "identify when memory growth or peaks become the first hard limit."}
+{"prompt": "One sentence on sequence length limits.", "target": "Longer token sequences increase compute cost and can trigger memory pressure."}
+{"prompt": "Rephrase: Keep experiments self-contained.", "target": "Ensure every dependency for the experiment is included within the repository."}
+{"prompt": "Finish: Evaluation overhead appears when", "target": "post-training checks consume substantial runtime relative to training."}
+{"prompt": "Write a concise metric logging principle.", "target": "Emit human-readable logs and compact machine-readable metrics together."}
+{"prompt": "Give one advantage of deterministic seeds.", "target": "Deterministic seeds reduce noise when comparing bottlenecks across runs."}
+{"prompt": "Complete: Effective batch size equals", "target": "per-device batch size multiplied by gradient accumulation steps."}
+{"prompt": "Short sentence about adapter reload.", "target": "Adapter reload timing isolates model restoration overhead from training."}
+{"prompt": "One line on CI constraints.", "target": "CPU-only GitHub runners require small models and explicit instrumentation."}
+{"prompt": "Complete: A bottleneck summary should", "target": "rank likely limiting factors using observed timing and memory evidence."}
+{"prompt": "Why avoid opaque abstractions here?", "target": "Explicit code paths make performance diagnoses easier for reviewers."}
+{"prompt": "One sentence on token statistics.", "target": "Token length distributions explain compute variation across optimizer steps."}
