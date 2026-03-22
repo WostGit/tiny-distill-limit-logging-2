@@ -1,0 +1,3 @@
+{"input": "Summarize: Evaluation overhead can hide training improvements.", "target": "Slow evaluation can mask gains from faster training steps."}
+{"input": "Summarize: Thread settings influence CPU throughput.", "target": "CPU thread configuration can significantly change throughput."}
+{"input": "Summarize: Preprocessing overhead matters for tiny datasets.", "target": "On tiny runs, tokenization time can be a major bottleneck."}

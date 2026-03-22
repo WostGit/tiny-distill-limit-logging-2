@@ -1,0 +1,8 @@
+{"input": "Summarize: GitHub Actions runs CI jobs in containers.", "target": "GitHub Actions executes CI workflows in isolated environments."}
+{"input": "Summarize: LoRA adapts large models with small trainable matrices.", "target": "LoRA fine-tunes models efficiently using low-rank adapter weights."}
+{"input": "Summarize: Distillation transfers behavior from teacher to student.", "target": "Distillation trains a smaller student model to mimic a teacher."}
+{"input": "Summarize: CPU runners are slower but easy to reproduce.", "target": "CPU CI runners trade speed for reproducibility and accessibility."}
+{"input": "Summarize: Verbose logs help identify bottlenecks quickly.", "target": "Detailed logs make performance bottlenecks easier to diagnose."}
+{"input": "Summarize: Small smoke tests should be deterministic and cheap.", "target": "Tiny deterministic smoke tests keep CI cost and variance low."}
+{"input": "Summarize: Checkpoint IO can dominate very short training runs.", "target": "Saving checkpoints may consume a large fraction of tiny-run wall time."}
+{"input": "Summarize: Sequence length strongly affects transformer compute.", "target": "Longer token sequences increase transformer compute and memory demand."}
